@@ -24,6 +24,8 @@
         // get win word
         const winWord = helper.getWinWord(words);
         component.set("v.winWord", winWord);
+        // reset the board
+        helper.resetBoard(component);
     },
 
     doRender: function (component, event, helper) {
@@ -39,10 +41,12 @@
             // user has won
             component.set("v.result", "YOU WIN");
             console.log("You win");
+            helper.disableBoard(component);
         } else if (clickCount === 3) {
             // user lose
             component.set("v.result", "YOU LOSE");
             console.log("You lose");
+            helper.disableBoard(component);
         }
         // set click count
         component.set("v.clickCount", clickCount);
