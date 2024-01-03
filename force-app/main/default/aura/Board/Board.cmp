@@ -1,7 +1,7 @@
 <aura:component implements="flexipage:availableForAllPageTypes">
-    <aura:attribute name="words" type="List" access="private" />
-    <aura:attribute name="winWord" type="String" access="private" />
-    <aura:attribute name="clickCount" type="Integer" default="0" access="private" />
+    <aura:attribute name="words" type="List" />
+    <aura:attribute name="winWord" type="String" />
+    <aura:attribute name="clickCount" type="Integer" default="0" />
 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <!-- <aura:handler name="render" value="{!this}" action="{!c.doRender}" /> -->
